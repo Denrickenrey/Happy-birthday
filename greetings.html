@@ -1,0 +1,733 @@
+<html>
+<head><title>Birthday Boy</title>
+<style>
+	body{
+		overflow-y: auto;
+		padding-right:35px;
+		padding-top:350px;
+		  background: linear-gradient(270deg, #ce68d9, #45c6db, #45db79);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+  transition: .8s ease-in-out;
+  border-radius: 7px;
+  cursor: pointer;
+		}
+	form h1{
+		text-align:center;
+		font-weight:bold;
+		font-size:100px;
+		}
+		
+		/* From Uiverse.io by Praashoo7 */ 
+/* CodePen Card */
+
+.card {
+  width: 15em;
+  height: 10em;
+
+}
+
+.fl {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.fl:hover .fullscreen {
+  scale: 1.2;
+}
+
+.fl:hover .fullscreen_svg {
+  fill: white;
+}
+
+.fullscreen {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  background-color: #727890;
+  margin: 1em;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease-in-out;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.fullscreen_svg {
+  width: 15px;
+  height: 15px;
+  fill: rgb(177, 176, 176);
+  transition: .2s ease-in-out;
+}
+
+.card_back {
+  position: absolute;
+  width: 15em;
+  height: 13em;
+  background-color: rgba(30, 31, 38, 0.575);
+  border-radius: 7px;
+  margin-top: -4.7em;
+  margin-left: 0.7em;
+  transition: .2s ease-in-out;
+  z-index: -1;
+}
+
+.main:hover .card_back {
+  margin-top: -5.9em;
+  margin-left: 0em;
+  scale: 1.1;
+  height: 15.25em;
+  cursor: pointer;
+}
+
+.main:hover .fl {
+  opacity: 1;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.img {
+  width: 2.25em;
+  height: 2.25em;
+  background-color: #252525;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0.5em;
+  font-family: Montserrat;
+  color: white;
+}
+
+.text_m {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.text_s {
+  font-size: 0.7em;
+}
+
+.btns {
+  display: flex;
+  gap: 0.5em;
+  transition: .2s ease-in-out;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .2s ease-in-out;
+}
+
+.likes_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.likes_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.likes:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .24s ease-in-out;
+}
+
+.comments_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.comments_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.comments:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.views {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .28s ease-in-out;
+}
+
+.views_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.views_svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.views:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.main:hover .likes {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.main:hover .comments {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.main:hover .views {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+
+
+/* The Main Switch */
+
+.card_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 0.8em;
+  width: 14em;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 0.8em;
+  align-self: center;
+  outline: none;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+button::after {
+  content: "(Hold Me)";
+  opacity: 0;
+  position: absolute;
+}
+
+button::before {
+  content: "∞";
+  font-size: 3.5em;
+  position: absolute;
+  opacity: 0;
+  left: 1.6em;
+  top: -0.36em;
+  transition: .4s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button:hover::after {
+  position: relative;
+  opacity: 1;
+  font-size: 0.7em;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+button:active {
+  scale: 1.1;
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(90deg, #ce68d9, #45c6db, #45db79, #9f45b0, #e54ed0, #ffe4f2);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 1s ease infinite;
+  -moz-animation: AnimationName 1s ease infinite;
+  animation: AnimationName 1s ease infinite;
+}
+
+button:active::before {
+  color: white;
+  opacity: 1;
+}
+
+
+
+
+
+		/* From Uiverse.io by elijahgummer */ 
+ul {
+		Filter: drop-shadow(1px 1px 20px gray);
+  justify-content:center;
+  align-items:center;
+  position: relative;
+  display: flex;
+  gap: 25px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 300px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+ul li:hover {
+  width: 800px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  
+  background: linear-gradient(45deg, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+}
+
+ul li:hover::after {
+  opacity: 0.5;
+}
+
+ul li .icon {
+  color: #777;
+  font-size: 100px;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+ul li:hover .icon {
+  transform: scale(0);
+  color: #fff;
+  transition-delay: 0s;
+}
+
+ul li span {
+  position: absolute;
+  
+  
+}
+
+ul li .title {
+  color: #fff;
+  font-size: 40px; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+  padding-left:25px;
+  padding-right:25px;
+}
+
+ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
+
+
+
+
+/*2nd*/
+div.second ul {
+	padding-top:50px;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+  display: flex;
+  gap: 25px;
+}
+
+div.second ul li {
+  position: relative;
+  list-style: none;
+  width: 300px;
+  height: 300px;
+  background: lightblue;
+  border-radius: 300px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+div.second ul li:hover {
+  width: 1000px;
+  height:800px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+div.second ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+
+div.second ul li:hover::before {
+  opacity: 1;
+}
+
+div.second ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+}
+
+div.second ul li:hover::after {
+  opacity: 0.5;
+}
+
+div.second ul li .icon {
+  color: white;
+  font-size: 100px;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+div.second ul li:hover .icon {
+  transform: scale(0);
+  color: #fff;
+  transition-delay: 0s;
+}
+
+div.second ul li span {
+  position: absolute;
+  
+  
+}
+
+div.second ul li .title {
+  color: #fff;
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+div.second ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+.memories{
+	align-items:center;
+	justify-content:center;
+	width:800px;
+	height:500px;
+	Filter: drop-shadow(1px 1px 10px black);
+	}
+	div.tap{
+		text-align:center;
+		justify-content:center;
+		align-items:center;
+		font-weight:bold;
+		font-size:50px;
+		color:white;
+		padding-left:15px;
+		padding-bottom:20px;
+		}
+		a{
+			text-decoration:none;
+			color:white;
+			font-weight:bold;
+			}
+			img{
+				margin-top:50px;
+				justify-content:center;
+				align-items:center;
+				}
+				video{
+				justify-content:center;
+				align-items:center;
+				}
+				
+				
+	  .title::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    .title::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 50px;
+    }
+
+    .title::-webkit-scrollbar-track {
+      background: #f0f0f0;
+    }
+    
+    
+    
+    /*3rd*/
+div.third ul {
+	padding-top:50px;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+  display: flex;
+  gap: 25px;
+}
+
+div.third ul li {
+  position: relative;
+  list-style: none;
+  width: 300px;
+  height: 300px;
+  background: lightgreen;
+  border-radius: 300px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+div.third ul li:hover {
+  width: 1000px;
+  height:800px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+div.third ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+
+div.third ul li:hover::before {
+  opacity: 1;
+}
+
+div.third ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+}
+
+div.third ul li:hover::after {
+  opacity: 0.5;
+}
+
+div.third ul li .icon {
+  color: white;
+  font-size: 100px;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+div.third ul li:hover .icon {
+  transform: scale(0);
+  color: #fff;
+  transition-delay: 0s;
+}
+
+div.third ul li span {
+  position: absolute;
+  
+  
+}
+
+div.third ul li .title {
+  color: #fff;
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+div.third ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+	</style>
+</head>
+<body>
+<form method="post">
+	<div class="tap">Tap</div>
+<ul>
+  <li style="--i:#FF9966;--j:#FF5E62;">
+    <span class="icon">&#127873;</span>
+    <span class="title" style="height: 300px; overflow-y: auto; "><br>
+    	<b>Happy birthday boi,</b> My wish for you is to achieve your dreams and more chix to come hahhaha urayim latta kiddi sunan mandi ka agbiruk sabali hahhaa tpos bawas bawasan mo na din ang pag iinom ng alak mandi kada rabii hahaha masbali igatang mo lattan nukwa iti makan mo or lubricant maimasan kapay mabsug kapay edi solid hahaha...awan maibagak kanyamon ta adda met gamin amin kanyamon, pogi, smart, mabuting aso, manyak, malibog, horny, uttog hahhah jk lang baka damdama ma highblood ka manen ket birthdaym pay hhaha.. atuy lang maibagak boi mandim lipatan jay libre mi ah hahahha happy birthday ulit, enjoy your stress day pare. 
+</span>
+  </li>
+</ul>
+<div class="second">
+<ul>
+  <li style="--i:#FF9966;--j:#FF5E62;">
+    <span class="icon">&#128444;</span>
+    <span class="title" style="height: 600px; overflow-y: auto; ">Tada!<br>
+<img src="img1.jpg"style="width:800px; height:1000px; margin-top:50px">
+	<img src="img2.jpg" style="width:800px; height:500px;">
+		<img src="img3.jpg" style="width:800px; height:500px;">
+			<img src="img4.jpg" style="width:800px; height:500px;">
+				<img src="img5.jpg" style="width:800px; height:700px;">
+					<img src="img6.jpg" style="width:800px; height:700px;">
+						<img src="img7.jpg" style="width:800px; height:700px;">
+				<img src="img8.jpg" style="width:800px; height:700px;">
+					<img src="img9.jpg" style="width:800px; height:500px;">
+						
+</span>
+  </li>
+</ul>
+</div>
+<div class="third">
+<ul>
+  <li style="--i:#FF9966;--j:#FF5E62;">
+    <span class="icon">&#127916;</span>
+    <span class="title" style="height: 600px; overflow-y: auto; ">Memories<br>
+						<video controls class="memories">
+		<source src="vid.mp4" >
+		</video><br>
+		<video controls class="memories" style="margin-top:50px; ">
+		<source src="vid1.mp4" >
+		</video><br>
+		<video controls class="memories" style="margin-top:50px; ">
+		<source src="vid2.mp4" >
+		</video><br>
+		<video controls class="memories" style="margin-top:50px; ">
+		<source src="vid3.mp4" >
+		</video><br>
+		<video controls class="memories" style="margin-top:50px; ">
+		<source src="vid4.mp4" >
+		</video><br>
+</span>
+  </li>
+</ul>
+</div>
+</form>
+</body>
+</html>
